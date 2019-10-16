@@ -6,9 +6,9 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     private readonly int maxTime = 23;
-    private int curTime;
 
-    public int startingTime = 20;
+    //public int startingTime = 20;
+    public int curTime = 20;
 
     // Number of seconds a hour lasts
     public float intervalTime = 5.0f;
@@ -16,7 +16,6 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        curTime = startingTime;
         InvokeRepeating("IncrementHour", intervalTime, intervalTime);
     }
 
