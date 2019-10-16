@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curTime: 6
-  intervalTime: 5
+  intervalTime: 2
 --- !u!4 &28880886
 Transform:
   m_ObjectHideFlags: 0
@@ -377,6 +377,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1067319995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1562182119257735479, guid: 3c98d8f259c564b398484ef01e78716c,
+    type: 3}
+  m_PrefabInstance: {fileID: 153428213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1642492629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1562182119257735479, guid: 3c98d8f259c564b398484ef01e78716c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8131019551985401681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1664480756
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,8 +422,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   routine:
-  - at: 0
-    interestPoint: {fileID: 0}
+  - at: 8
+    interestPoint: {fileID: 1067319995}
+  - at: 16
+    interestPoint: {fileID: 1642492629}
+  player: {fileID: 0}
 --- !u!136 &1664480758
 CapsuleCollider:
   m_ObjectHideFlags: 0
