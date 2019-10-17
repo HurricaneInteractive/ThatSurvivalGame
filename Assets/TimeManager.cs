@@ -7,7 +7,7 @@ public class TimeManager : MonoBehaviour
 {
     private readonly int maxTime = 23;
 
-    //public int startingTime = 20;
+    public int dayCount = 1;
     public int curTime = 20;
 
     // Number of seconds a hour lasts
@@ -24,6 +24,7 @@ public class TimeManager : MonoBehaviour
         if (curTime == maxTime)
         {
             curTime = 0;
+            dayCount++;
         }
         else
         {
