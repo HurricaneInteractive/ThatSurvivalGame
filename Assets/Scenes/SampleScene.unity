@@ -138,7 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 28880884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7f6673ad79b3438e993dbe5c5eb117e, type: 3}
+  m_Script: {fileID: 11500000, guid: b0490b44085c54886806311618c33e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dayCount: 1
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 63712585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e3be756b24c94f6c8ebc9324f2109d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec3f56ffd63f483fa89de5bc2101b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moraleStartingValue: 100
@@ -581,7 +581,7 @@ Skybox:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 0}
+  m_CustomSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb15ecc531b74dd181d702aeb072985, type: 3}
+  m_Script: {fileID: 11500000, guid: c2d4388f888234c09a46fe8c40bb88c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 50
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1664480756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff30ba4884c5c431e82afe1988f101a1, type: 3}
+  m_Script: {fileID: 11500000, guid: f21882004775f48a9aa8fd20a2430f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   routine:
