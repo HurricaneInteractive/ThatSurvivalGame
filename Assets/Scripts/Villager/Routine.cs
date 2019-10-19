@@ -8,6 +8,7 @@ public class Routine : MonoBehaviour
     private TimeManager timeManager;
     private int oldTime;
     private GameObject interestPoint;
+    private bool lookingAtTarget = false;
 
     public RoutineObject[] routine;
     public float walkSpeed = 2.0f;
@@ -32,6 +33,7 @@ public class Routine : MonoBehaviour
                 if (currentRoutine.GetAt() == timeManager.GetCurrentTime())
                 {
                     interestPoint = currentRoutine.GetInterestPoint();
+                    lookingAtTarget = false;
                 }
             }
 
@@ -50,7 +52,15 @@ public class Routine : MonoBehaviour
              */
             float step = walkSpeed * Time.deltaTime;
             Vector3 destination = new Vector3(interestPoint.transform.position.x, transform.position.y, interestPoint.transform.position.z);
+            Vector3 rotation = interestPoint.transform.position - transform.position;
+            rotation.y = 0;
+
             transform.position = Vector3.MoveTowards(transform.position, destination, step);
+
+            if (!lookingAtTarget) {
+                transform.LookAt(interestPoint.transform);
+                lookingAtTarget = true;
+            }
 
             if (Vector3.Distance(transform.position, interestPoint.transform.position) < 0.001f)
             {
