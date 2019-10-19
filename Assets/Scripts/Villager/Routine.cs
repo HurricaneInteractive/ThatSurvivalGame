@@ -49,7 +49,8 @@ public class Routine : MonoBehaviour
              * @see https://docs.unity3d.com/ScriptReference/Vector3.MoveTowards.html
              */
             float step = walkSpeed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, interestPoint.transform.position, step);
+            Vector3 destination = new Vector3(interestPoint.transform.position.x, transform.position.y, interestPoint.transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, destination, step);
 
             if (Vector3.Distance(transform.position, interestPoint.transform.position) < 0.001f)
             {
