@@ -1,0 +1,35 @@
+using UnityEngine;
+
+[RequireComponent(typeof(CanvasRenderer))]
+public class VillagerStatistics : MonoBehaviour {
+  private CanvasRenderer render;
+  private GameObject selectedVillager;
+  private Villager villagerScript;
+
+  private void Start() {
+    render = gameObject.GetComponent<CanvasRenderer>();
+    render.gameObject.SetActive(false);
+  }
+
+  private void Update() {
+    if (selectedVillager && villagerScript) {
+      Renderer render = villagerScript.villager.GetComponent<Renderer>();
+      if (render.material.shader.name != "Custom/OutlineShader") {
+        villagerScript.setCustomOutlineShader();
+      }
+    }
+  }
+
+  public void OpenStatistics(GameObject villager) {
+    selectedVillager = villager;
+    villagerScript = (Villager)selectedVillager.GetComponent(typeof(Villager));
+    villagerScript.setCustomOutlineShader();
+
+    render.gameObject.SetActive(true);
+  }
+
+  public void CloseStatistics() {
+    villagerScript.resetToDefaultShader();
+    render.gameObject.SetActive(false);
+  }
+}
