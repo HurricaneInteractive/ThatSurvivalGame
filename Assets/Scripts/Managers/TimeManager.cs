@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class TimeManager : MonoBehaviour
 
     // Number of seconds a hour lasts
     public float intervalTime = 5.0f;
+    public Text clockText;
 
     // Update is called once per frame
     void Start()
     {
+        clockText.text = GetCurrentUITime();
         InvokeRepeating("IncrementHour", intervalTime, intervalTime);
     }
 
@@ -31,7 +34,7 @@ public class TimeManager : MonoBehaviour
             curTime = curTime += 1;
         }
 
-        Debug.Log(GetTimeAsString(curTime));
+        clockText.text = GetCurrentUITime();
     }
 
     public string GetCurrentUITime()
