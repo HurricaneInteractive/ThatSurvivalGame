@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class TimeManagerScript
     public TimeManager script;
 
     public TimeManagerScript() {
-        timeManager = GameObject.FindGameObjectWithTag("TimeManager");
+        timeManager = GameObject.FindGameObjectWithTag(Enum.GetName(typeof(Tags), 0));
         script = (TimeManager)timeManager.GetComponent(typeof(TimeManager));
     }
 }
