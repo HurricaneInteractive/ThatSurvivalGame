@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TimeManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class TimeManager : MonoBehaviour
 
     // Number of seconds a hour lasts
     public float intervalTime = 5.0f;
-    public Text clockText;
+    public TextMeshProUGUI clockText;
 
     // Update is called once per frame
     void Start()
