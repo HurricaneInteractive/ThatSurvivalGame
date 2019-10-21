@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1223524647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63cde8c00260d48bda435b9357353e2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1500899770db44383a0487f85ebc8004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1417126976
@@ -1667,6 +1667,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1545479185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545479179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d3cbcba7a2d4056abb939ae8c4fd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  hunger: 0
+  thirst: 0
+  morale: 100
+  scavengingAbility: 0
 --- !u!1 &1610862135
 GameObject:
   m_ObjectHideFlags: 0
