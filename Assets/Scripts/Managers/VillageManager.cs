@@ -7,7 +7,7 @@ public class VillageManager : MonoBehaviour
 {
     private TimeManager timeManager;
     private Camera cam;
-    private VillagerStatistics villagerStatisticsScript;
+    private VillagerStatisticsUI villagerStatisticsScript;
     private GameObject[] villagers;
 
     public VillageStatistic morale;
@@ -22,7 +22,7 @@ public class VillageManager : MonoBehaviour
     {
         timeManager = new TimeManagerScript().script;
         cam = Camera.main;
-        villagerStatisticsScript = (VillagerStatistics)villagerStatistics.GetComponent(typeof(VillagerStatistics));
+        villagerStatisticsScript = (VillagerStatisticsUI)villagerStatistics.GetComponent(typeof(VillagerStatisticsUI));
         villagers = GameObject.FindGameObjectsWithTag(Enum.GetName(typeof(Tags), 2));
 
         moraleIntervalTime = timeManager.intervalTime / 2;

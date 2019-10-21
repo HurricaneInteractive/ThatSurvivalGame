@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasRenderer))]
-public class VillagerStatistics : MonoBehaviour {
+public class VillagerStatisticsUI : MonoBehaviour {
   private CanvasRenderer render;
   private GameObject selectedVillager;
   private Villager villagerScript;
