@@ -60,4 +60,8 @@ public class TimeManager : MonoBehaviour
 
         return prefix + currentTime.ToString() + suffix;
     }
+
+    public float GetDayLength() {
+        return intervalTime * 24;
+    }
 }
