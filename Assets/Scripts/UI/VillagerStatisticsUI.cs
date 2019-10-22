@@ -22,7 +22,7 @@ public class VillagerStatisticsUI : MonoBehaviour {
 
   public void OpenStatistics(GameObject villager) {
     selectedVillager = villager;
-    villagerScript = (Villager)selectedVillager.GetComponent(typeof(Villager));
+    villagerScript = new ObjectScript<Villager>(villager).script;
     villagerScript.setCustomOutlineShader();
 
     render.gameObject.SetActive(true);

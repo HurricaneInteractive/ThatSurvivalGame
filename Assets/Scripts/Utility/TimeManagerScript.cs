@@ -10,6 +10,6 @@ public class TimeManagerScript
 
     public TimeManagerScript() {
         timeManager = GameObject.FindGameObjectWithTag(Enum.GetName(typeof(Tags), 0));
-        script = (TimeManager)timeManager.GetComponent(typeof(TimeManager));
+        script = new ObjectScript<TimeManager>(timeManager).script;
     }
 }

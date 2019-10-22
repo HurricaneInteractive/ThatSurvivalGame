@@ -22,7 +22,7 @@ public class VillageManager : MonoBehaviour
     {
         timeManager = new TimeManagerScript().script;
         cam = Camera.main;
-        villagerStatisticsScript = (VillagerStatisticsUI)villagerStatistics.GetComponent(typeof(VillagerStatisticsUI));
+        villagerStatisticsScript = new ObjectScript<VillagerStatisticsUI>(villagerStatistics).script;
         villagers = GameObject.FindGameObjectsWithTag(Enum.GetName(typeof(Tags), 2));
 
         moraleIntervalTime = timeManager.intervalTime / 2;
@@ -61,7 +61,7 @@ public class VillageManager : MonoBehaviour
 
     public void resetVillagerShaders() {
         foreach(GameObject obj in villagers) {
-            Villager villagerScript = (Villager)obj.GetComponent(typeof(Villager));
+            Villager villagerScript = new ObjectScript<Villager>(obj).script;
             villagerScript.resetToDefaultShader();
         }
     }
